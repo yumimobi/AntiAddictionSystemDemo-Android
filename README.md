@@ -21,7 +21,7 @@ Java: > JDK 7
 ```groovy
 dependencies {
     // AntiAddictionSDK
-    implementation "com.zplay.sdk:antiaddiction:0.0.4"
+    implementation "com.zplay.sdk:antiaddiction:0.0.5"
 ｝
 ```
 
@@ -29,7 +29,7 @@ dependencies {
 
 **下载并添加防沉迷SDK：**
 
->[SDK 下载](https://github.com/yumimobi/YumiMediationSDKDemo-Android/blob/master/docs/YumiMediationSDK%20for%20Android%20Download%20Page.md)
+>[SDK 下载](https://github.com/yumimobi/AntiAddictionSystemDemo-Android/blob/master/eclipseSDK/AntiAddictionSDK.zip)
 
  
 # 3. 配置防沉迷SDK需要的参数
@@ -38,7 +38,7 @@ dependencies {
 
 <img src="resources\antiAddiction-ZplayConfig.png" alt="antiAddiction-ZplayConfig">
 
->[ZplayConfig.xml 下载](https://github.com/yumimobi/YumiMediationSDKDemo-Android/blob/master/docs/YumiMediationSDK%20for%20Android%20Download%20Page.md)
+>[ZplayConfig.xml 下载](https://github.com/yumimobi/AntiAddictionSystemDemo-Android/blob/master/app/src/main/assets/ZplayConfig.xml)
 
 ## 3.2 修改ZplayConfig.xml文件中的配置
 <img src="resources\antiAddiction-ZplayConfig1.png" alt="antiAddiction-ZplayConfig1">
@@ -162,8 +162,8 @@ ZplayAddictionSDK.loginWithUserName(Activity, userName, password);
 ZplayAddictionSDK.loginWithPlatformToken(this, token, uid, platformName);
 ```
 
-### 4.3.4 Zplay封装的登录SDK进行登录
-游戏如果使用Zplay封装的登录SDK，并且获取到了登录成功之后的ZplayId，请使用下面的接口进行登录
+### 4.3.4 Zplay封装的官网，渠道登录SDK进行登录
+游戏如果使用Zplay封装的官网登录，渠道登录SDK，并且获取到了ZplayId，请使用下面的接口进行登录
 ```java
 //zplayID：Zplay封装的登录SDK返回的zplayID
 ZplayAddictionSDK.loginWithZplayID(Activity, zplayId);
