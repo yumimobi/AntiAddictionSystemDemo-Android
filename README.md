@@ -95,9 +95,15 @@ warningCallback = new ZplayWarningCallback() {
     }
 
     @Override
-    public void userClickLoginButton() {
+    public void userClickLoginButtonInPayment() {
         //当用户在游客模式点击支付，防沉迷SDK判断当前为游客模式时会弹出提示让用户选择是否登录，当用户点击登陆按钮后会触发此回调，游戏收到回调后需引导用户进行登录，用户不登录也可以继续游戏
     }
+
+    @Override
+    public void userClickLoginButtonInNoTimeLeft() {
+        //当用户以游客身份在游戏中时长已到即接收到此回调，防沉迷SDK会弹出弹窗让用户登录后继续游戏或退出游戏，游戏需要引导用户进行登录，并且处理用户不登录则不可继续游戏的逻辑。
+    }
+
 
     @Override
     public void userClickQuitButton() {
