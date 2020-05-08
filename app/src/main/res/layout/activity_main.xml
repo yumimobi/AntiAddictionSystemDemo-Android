@@ -1,0 +1,259 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/zplay_antiaddiction_bg"
+    android:orientation="vertical"
+    tools:context=".MainActivity" >
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:orientation="vertical" >
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:textSize="20dp"
+                android:textStyle="bold"
+                android:text="登录相关：" />
+
+
+            <TextView
+                android:layout_marginTop="30dp"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="使用SDK登录界面进行登录：" />
+
+            <Button
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:onClick="doLogin"
+                android:text="登录" />
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:text="游戏如果不想使用SDK的登录界面，想使用游戏自己定制的登录界面，请调用下面的登录接口，登录Zplay账号：" />
+
+            <EditText
+                android:id="@+id/getUserName"
+                android:layout_width="fill_parent"
+                android:layout_marginTop="10dp"
+                android:padding="5dp"
+                android:layout_height="35dp"
+                android:background="@drawable/zplay_antiaddiction_text_bg"
+                android:hint="请输入账号"
+                android:textColor="@color/zplay_antiaddiction_red_txt"
+                android:textColorHint="@color/zplay_antiaddiction_gray1"
+                />
+
+
+            <EditText
+                android:id="@+id/getPassword"
+                android:layout_width="fill_parent"
+                android:layout_marginTop="10dp"
+                android:padding="5dp"
+                android:layout_height="35dp"
+                android:background="@drawable/zplay_antiaddiction_text_bg"
+                android:hint="请输入密码"
+                android:textColor="@color/zplay_antiaddiction_red_txt"
+                android:textColorHint="@color/zplay_antiaddiction_gray1"
+                />
+
+            <Button
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:onClick="loginWithUserName"
+                android:text="登录" />
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:text="游戏已经接入Zplay封装的登录SDK功能，并且获取到ZplayId，请使用下面的接口进行实名认证：" />
+            
+            <EditText
+                android:id="@+id/getZplayId"
+                android:layout_width="fill_parent"
+                android:layout_marginTop="10dp"
+                android:padding="5dp"
+                android:layout_height="35dp"
+                android:background="@drawable/zplay_antiaddiction_text_bg"
+                android:hint="请输入需要认证的ZplayID"
+                android:textColor="@color/zplay_antiaddiction_red_txt"
+                android:textColorHint="@color/zplay_antiaddiction_gray1"
+                />
+
+            <Button
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:onClick="showLoginWithZplayId"
+                android:text="ZplayId实名认证" />
+
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:text="游戏自己接入的三方的登录（微信，QQ等），获取到三方的登录唯一标识以及用户Id，请使用下面的接口进行实名认证：" />
+
+            <EditText
+                android:id="@+id/getToken"
+                android:layout_width="fill_parent"
+                android:layout_marginTop="10dp"
+                android:padding="5dp"
+                android:layout_height="35dp"
+                android:background="@drawable/zplay_antiaddiction_text_bg"
+                android:hint="请输入三方平台返回的Token"
+                android:textColor="@color/zplay_antiaddiction_red_txt"
+                android:textColorHint="@color/zplay_antiaddiction_gray1"
+                />
+
+            <EditText
+                android:id="@+id/getUid"
+                android:layout_width="fill_parent"
+                android:layout_marginTop="10dp"
+                android:padding="5dp"
+                android:layout_height="35dp"
+                android:background="@drawable/zplay_antiaddiction_text_bg"
+                android:hint="请输入三方平台返回的Uid"
+                android:textColor="@color/zplay_antiaddiction_red_txt"
+                android:textColorHint="@color/zplay_antiaddiction_gray1"
+                />
+
+
+            <EditText
+                android:id="@+id/getPlatformName"
+                android:layout_width="fill_parent"
+                android:layout_marginTop="10dp"
+                android:padding="5dp"
+                android:layout_height="35dp"
+                android:background="@drawable/zplay_antiaddiction_text_bg"
+                android:hint="请输入三方平台名称(联系产品获取)"
+                android:textColor="@color/zplay_antiaddiction_red_txt"
+                android:textColorHint="@color/zplay_antiaddiction_gray1"
+                />
+
+            <Button
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:onClick="loginWithPlatform"
+                android:text="三方平台登录实名认证" />
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:text="如果当前登录的账号为游客账号，可以调用下面的接口显示游客账号的实名认证：" />
+            <Button
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:onClick="showAuthentication"
+                android:text="显示游客账号的实名认证" />
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:text="获取当前登录账号的账号类型，user为注册账号，visitor为游客账号：" />
+
+            <Button
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:onClick="getLoginType"
+                android:text="获取登录类型" />
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:text="获取当前账号的实名认证类型：" />
+
+            <Button
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:onClick="getIdCardType"
+                android:text="获取实名认证状态" />
+
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:text="如果你想注销登录，请使用下面的接口进行注销(注销之后会自动切换为游客登录模式)：" />
+
+            <Button
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:onClick="logOut"
+                android:text="注销账号" />
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:textSize="20dp"
+                android:textStyle="bold"
+                android:text="支付相关：" />
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:text="支付之前判断当前用户是否可以支付：" />
+
+            <EditText
+                android:id="@+id/getMoney"
+                android:layout_width="fill_parent"
+                android:layout_marginTop="10dp"
+                android:padding="5dp"
+                android:layout_height="35dp"
+                android:background="@drawable/zplay_antiaddiction_text_bg"
+                android:hint="请输入本次需要支付的金额(单位分)"
+                android:inputType="number|numberDecimal"
+                android:textColor="@color/zplay_antiaddiction_red_txt"
+                android:textColorHint="@color/zplay_antiaddiction_gray1"
+                />
+
+            <Button
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:onClick="checkPay"
+                android:text="检测是否可以支付" />
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:text="支付成功之后，上报本次支付的金额：" />
+
+            <EditText
+                android:id="@+id/getPaySuccessMoney"
+                android:layout_width="fill_parent"
+                android:layout_marginTop="10dp"
+                android:padding="5dp"
+                android:layout_height="35dp"
+                android:background="@drawable/zplay_antiaddiction_text_bg"
+                android:hint="请输入本次支付成功的金额(单位分)"
+                android:inputType="number|numberDecimal"
+                android:textColor="@color/zplay_antiaddiction_red_txt"
+                android:textColorHint="@color/zplay_antiaddiction_gray1"
+                />
+
+            <Button
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:onClick="reportMoney"
+                android:text="进行支付成功上报" />
+
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>
