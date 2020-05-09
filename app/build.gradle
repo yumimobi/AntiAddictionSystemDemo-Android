@@ -23,5 +23,5 @@ dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
     testImplementation 'junit:junit:4.12'
 
-    implementation "com.zplay.sdk:antiaddiction:0.0.6"
+    implementation "com.zplay.sdk:antiaddiction:0.0.9"
 }
