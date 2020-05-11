@@ -1,3 +1,5 @@
+[See the English Guide](https://github.com/yumimobi/AntiAddictionSystemDemo-Android/wiki)
+
 # 1. 概述
 
 ## 1.1 面向人群
@@ -29,9 +31,17 @@ dependencies {
 
 **下载并添加防沉迷SDK：**
 
->[SDK 下载](https://github.com/yumimobi/AntiAddictionSystemDemo-Android/blob/master/eclipseSDK/AntiAddictionSDK.zip)
+>[Eclipse SDK 下载](https://github.com/yumimobi/AntiAddictionSystemDemo-Android/blob/master/eclipseSDK/AntiAddictionSDK.zip)
 
- 
+ ## 2.3 防混淆配置
+ 如果您的工程需要混淆编译， 请在混淆文件内增加以下内容
+
+ ```groovy
+-keepattributes Exceptions,InnerClasses,Signature,Deprecated,SourceFile,LineNumberTable,*Annotation*,Synthetic,EnclosingMethod
+-keep class com.zplay.android.addiction.prevention.** { *;}
+```
+
+
 # 3. 配置防沉迷SDK需要的参数
 
 ## 3.1 下载ZplayConfig.xml文件,并添加到工程的assets目录下
