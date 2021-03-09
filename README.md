@@ -23,7 +23,7 @@ Java: > JDK 7
 ```groovy
 dependencies {
     // AntiAddictionSDK
-    implementation "com.zplay.sdk:antiaddiction:1.0.0"
+    implementation "com.zplay.sdk:antiaddiction:1.0.6"
 ｝
 ```
 
