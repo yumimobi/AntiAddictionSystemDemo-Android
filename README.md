@@ -23,7 +23,7 @@ Java: > JDK 7
 ```groovy
 dependencies {
     // AntiAddictionSDK
-    implementation "com.yumimobi.ads.sdk:antiaddiction:1.1.1"
+    implementation "com.yumimobi.ads.sdk:antiaddiction:1.1.2"
 ｝
 ```
 
@@ -88,6 +88,11 @@ loginCallback = new ZplayLoginCallback() {
     @Override
     public void loginFail() {
         //登录失败
+    }
+
+    @Override
+    public void onSwitch() {
+         //切换账号
     }
 };
 
