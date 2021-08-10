@@ -71,6 +71,14 @@ public class MainActivity extends Activity {
             }
 
             @Override
+            public void onSwitch() {
+                Log.d(TAG, "onSwitch: ");
+                Toast.makeText(MainActivity.this,
+                        "切换账号", Toast.LENGTH_SHORT)
+                        .show();
+            }
+
+            @Override
             public void loginFail() {
                 Toast.makeText(MainActivity.this,
                         "登录失败", Toast.LENGTH_SHORT)

@@ -23,17 +23,23 @@ Java: > JDK 7
 ```groovy
 dependencies {
     // AntiAddictionSDK
-    implementation "com.zplay.sdk:antiaddiction:1.0.6"
+    implementation "com.yumimobi.ads.sdk:antiaddiction:1.1.1"
 ｝
 ```
 
-## 2.2 Eclipse 接入
+在工程的 build.gradle 中添加maven central
 
-**下载并添加防沉迷SDK：**
+```groovy
+allprojects {
+    repositories {
+        mavenCentral()
+        maven { url 'https://repo1.maven.org/maven2/' }
+    }
+}
+```
 
->[Eclipse SDK 下载](https://github.com/yumimobi/AntiAddictionSystemDemo-Android/blob/master/eclipseSDK/AntiAddictionSDK.zip)
 
- ## 2.3 防混淆配置
+ ## 2.2 防混淆配置
  如果您的工程需要混淆编译， 请在混淆文件内增加以下内容
 
  ```groovy
