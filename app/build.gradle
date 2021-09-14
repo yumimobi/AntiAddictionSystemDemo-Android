@@ -23,5 +23,5 @@ dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
     testImplementation 'junit:junit:4.12'
 
-    implementation "com.yumimobi.ads.sdk:antiaddiction:1.1.7"
+    implementation "com.yumimobi.ads.sdk:antiaddiction:1.1.8"
 }
